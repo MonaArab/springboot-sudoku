@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <style type="text/css">
+        .table td {
+            text-align: center;
+            vertical-align: center;
+        }
+        input {
+            text-align: center;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="margin-top: 20px;margin-bottom: 20px;">
+    <b class="alert">Solve this sudoku.</b>
+</div>
+<div class="container">
+    <table>
+        <tr>
+            <td style="width: 50%; padding-right: 40px;">
+                <div>
+                    <table class="table table-bordered" >
+    <span th:each="row,id : ${puzzel}">
+
+<!--        <div th:if="${id.index % 3 == 0}">-->
+            <tr style="border: #101010; border-bottom-width: thin;">
+            <td th:each="num: ${row}" style="width: 11%; align-content: center; vertical-align: center">
+
+                <div th:if="${num == 0}">
+                  <input type="text" width="30" height="30"/>
+                </div>
+                <div th:unless="${num == 0}">
+                  <p th:text="${num}" ></p>
+                </div>
+            </td>
+        </tr>
+
+    </span>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <table class="table table-bordered" >
+    <span th:each="row : ${solvePuzzel}">
+        <tr>
+            <td th:each="num: ${row}" style="width: 11.11%; align-content: center">
+                <p th:text="${num}"></p>
+            </td>
+        </tr>
+    </span>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <div class="container">
+                <table >
+                    <tbody>
+                    <tr>
+                        <td><a type="button" class="btn btn-warning" href="/solve">solve</a></td>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </tr>
+    </table>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../static/js/bootstrap.js" th:href="@{/js/bootstrap.js}"></script>
+
+</body>
+</html>
