@@ -1,4 +1,4 @@
-package com.example.springbootsudoku.mode;
+package com.example.springbootsudoku.model;
 
 
 public class SudokuBoard {

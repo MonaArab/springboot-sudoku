@@ -1,6 +1,6 @@
 package com.example.springbootsudoku;
 
-import com.example.springbootsudoku.mode.SudokuBoard;
+import com.example.springbootsudoku.model.SudokuBoard;
 import com.example.springbootsudoku.service.SudokuService;
 import org.junit.Assert;
 import org.junit.Test;

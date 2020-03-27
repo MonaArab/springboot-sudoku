@@ -1,9 +1,8 @@
 package com.example.springbootsudoku.controller;
 
-import com.example.springbootsudoku.mode.SudokuBoard;
+import com.example.springbootsudoku.model.SudokuBoard;
 import com.example.springbootsudoku.service.SudokuService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
